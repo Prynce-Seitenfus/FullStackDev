@@ -1,3 +1,15 @@
-<input placeholder="distância em km" />
+<input placeholder="distancia em km" id="campoDistanciaK"/>
 <input placeholder="tempo em minutos" />
-<button onclick="alert('Calculo do App');">Calcula</button>
+<button onclick="CalculaCorrida()">Calcula</button>
+
+<script>
+    function CalculaCorrida() 
+    {
+        var tarifaDinamica = 1.4;
+        var distancia=campoDistancia.value * tarifaDinamica;
+        var tempo = 5 * 0.26;
+        var valor = distancia + tempo;
+
+        alert(valor);
+    }
+</script>
