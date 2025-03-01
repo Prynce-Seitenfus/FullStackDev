@@ -1,0 +1,46 @@
+<!-- http://latentflip.com/ 
+ Site to debug javascript code -->
+
+ <!-- https://developer.mozilla.org/en-US/docs/Web/API/History 
+  API to manage browser history -->
+
+<script>
+    // LIFO - Stack
+    console.log('[Pilha/Stack]');
+    class BrowserHistoryStack {        
+        constructor() {
+            this.cursor = 0;
+            this.data = [];
+        }
+
+        push(url) {
+            this.cursor++;
+            this.data.push(url);
+            console.log('Pushed:', url);
+        }
+
+        back() {
+            this.cursor--;
+            console.log('Popped:', 'Nothing to do');
+            // this.data.pop();
+        }
+
+        clear() {
+            this.cursor = 0;
+            this.data = [];
+        }
+
+        print() {
+            console.log('Cursor:', this.cursor);
+            console.log('History:', this.data);
+        }
+    }    
+
+    const history = new BrowserHistoryStack();
+    history.push('google.com');
+    history.push('facebook.com');
+    history.push('youtube.com');
+    history.back();
+    history.print();
+    
+</script>
