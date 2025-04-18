@@ -1,4 +1,4 @@
-name: CI
+name: CI-basic-hello-world
 
 on:
   push:
