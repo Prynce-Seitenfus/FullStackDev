@@ -5,7 +5,7 @@ describe('Conversor de Temperatura', () => {
 
     it('Deve converter corretamente Fahrenheit para Celsius', (done) => {
 
-      const resultado = convert.fahrenheitCelsius(/*131*/130);
+      const resultado = convert.fahrenheitCelsius(131);
 
       expect(resultado).to.equal(55);
       done();
