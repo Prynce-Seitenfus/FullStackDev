@@ -38,4 +38,3 @@ jobs:
           tags:
             prynceseitenfus/aula-conversao-temperatura:v1
             prynceseitenfus/aula-conversao-temperatura:latest
-          
