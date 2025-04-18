@@ -23,4 +23,6 @@ jobs:
           cd Disciplina-04/convert-temp/src;
           npm install -g mocha;
           npm install
-      
+
+      - name: Test execution
+        run: mocha Disciplina-04/convert-temp/src/test/convert.js
