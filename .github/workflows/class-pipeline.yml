@@ -26,3 +26,16 @@ jobs:
 
       - name: Test execution
         run: mocha Disciplina-04/convert-temp/src/test/convert.js
+
+      - name: Build and push Docker images
+        # You may pin to the exact commit or the version.
+        # uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4
+        uses: docker/build-push-action@v6.15.0
+        with:
+          context: Disciplina-04/convert-temp/src
+          file: Disciplina-04/convert-temp/src/Dockerfile
+          push: true
+          tags:
+            prynceseitenfus/aula-conversao-temperatura:v1
+            prynceseitenfus/aula-conversao-temperatura:latest
+          
