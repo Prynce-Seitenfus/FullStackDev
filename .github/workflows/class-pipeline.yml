@@ -18,10 +18,9 @@ jobs:
         with:
           node-version: 16.13.2
 
-
       - name: Install Mocha test and packages
         run:
-          cd src;
+          cd Disciplina-04/convert-temp/src;
           npm install -g mocha;
           npm install
       
