@@ -36,5 +36,5 @@ jobs:
           file: ./Disciplina-04/convert-temp/src/Dockerfile
           push: true
           tags:
-            prynceseitenfus/aula-conversao-temperatura:v1
-            prynceseitenfus/aula-conversao-temperatura:latest
+            Prynce-Seitenfus/aula-conversao-temperatura:v1
+            Prynce-Seitenfus/aula-conversao-temperatura:latest
