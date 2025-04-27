@@ -1,0 +1,63 @@
+#!/usr/bin/expect
+
+# Enable logging of all messages from the spawned process
+log_user 1
+# exp_internal 1  # Enable debugging for detailed output
+
+# Start the installation script
+spawn /installers/st-stm32cubeide_1.18.1_24813_20250409_2138_amd64.sh
+
+# Handle the `--More--` prompt
+expect {
+    -re "--More--" {
+        puts "'--More--' prompt detected. Sending 'q' to skip..."
+        send "q"
+    }
+}
+
+# Handle the license agreement prompt
+expect {
+    -re "I ACCEPT \\(y\\) / I DO NOT ACCEPT \\(N\\).*" {
+        puts "License agreement prompt detected. Sending 'y' to accept..."
+        send "y\r"  # Send 'y' to accept the license
+    }
+}
+
+# Handle the installation directory prompt
+expect {
+    -re "STM32CubeIDE install dir\\?.*" {
+        puts "Installation directory prompt detected. Pressing Enter to accept default..."
+        send "\r"  # Press Enter to accept the default directory
+    }
+}
+
+# Handle the Segger J-Link udev rules prompt
+expect {
+    -re "Do you want to install Segger J-Link udev rules\\?.*" {
+        puts "Segger J-Link udev rules prompt detected. Sending 'y'..."
+        send "y\r"
+    }
+}
+
+# Handle the `--More--` prompt
+expect {
+    -re "--More--" {
+        puts "'--More--' prompt detected. Sending 'q' to skip..."
+        send "q"
+    }
+}
+
+# Handle the license agreement prompt
+expect {
+    -re "I ACCEPT \\(y\\) / I DO NOT ACCEPT \\(N\\).*" {
+        puts "License agreement prompt detected. Sending 'y' to accept..."
+        send "y\r"  # Send 'y' to accept the license
+    }
+}
+
+# Wait for the installation to complete
+expect {
+    "STM32CubeIDE installed successfully" {
+        puts "Installation completed successfully."
+    }
+}
