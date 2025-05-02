@@ -1,14 +1,14 @@
 # Dockerfile for STM32CubeIDE installation 
-FROM ubuntu
+FROM ubuntu:24.04
 
 # Update package lists
-RUN apt update && \
-    apt install -y expect && \
-    apt-get install -y xvfb
+RUN apt-get update && \
+    apt-get install -y expect xvfb && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy STM32CubeIDE installer and scripts individually
-COPY installers/st-stm32cubeide_1.18.1_24813_20250409_2138_amd64.sh /installers/
-COPY installers/auto-interaction.exp /installers/
+# Copy STM32CubeIDE installers
+COPY installers/ /installers/
 
 # Make the extracted installation script executable
 RUN chmod +x /installers/st-stm32cubeide_1.18.1_24813_20250409_2138_amd64.sh && \

@@ -7,9 +7,9 @@ on:
 
 jobs:
   CI:
-    runs-on: self-hosted  # Use self-hosted runner if required
+    runs-on: self-hosted
     container:
-      image: prynceseitenfus/STM32CubeIDE:1.18.1  # Use your Docker Hub image as the container
+      image: prynceseitenfus/STM32CubeIDE:1.18.1
 
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +19,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Run build.sh
+        run: ./TCC/test-board/build.sh
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.9.0
