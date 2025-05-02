@@ -1,2 +1,24 @@
-Disciplina-02/pinoquio.js
-#Disciplina-04/convert-temp/src/node_modules/
+# TCC
+.metadata/
+
+## STM32CubeIDE build output folders
+test-board/Debug/
+test-board/Release/
+
+## STM32CubeIDE metadata (not needed for version control)
+test-board/.metadata/
+
+## STM32CubeIDE local settings (optional, usually user-specific)
+test-board/.settings/
+
+## OS and editor junk files
+test-board/*.swp
+test-board/*.swo
+test-board/*.tmp
+test-board/*.bak
+test-board/.DS_Store
+test-board/Thumbs.db
+
+## STM32CubeIDE installer file for Linux Ubuntu
+## This file is not needed for version control, as it is a binary installer
+TCC/installers/st-stm32cubeide_1.18.1_24813_20250409_2138_amd64.sh

@@ -1,0 +1,13 @@
+# Version control and editor files
+.git
+.gitignore
+.vscode
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+
+# STM32CubeIDE build outputs and metadata
+test-board/Debug
+test-board/Release
+test-board/.metadata
