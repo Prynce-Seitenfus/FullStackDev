@@ -14,5 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Show working directory and files
+        run: |
+          pwd
+          ls -l
+          ls -l ./TCC/test-board
+
       - name: Run build.sh
         run: ./TCC/test-board/build.sh
