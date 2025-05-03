@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 
 # Update package lists
 RUN apt-get update && \
-    apt-get install -y expect xvfb && \
+    apt-get install -y git expect xvfb && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
