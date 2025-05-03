@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-          repository: Prynce-Seitenfus/FullStackDev/TCC/test-board
+          repository: Prynce-Seitenfus/FullStackDev
 
           token: ${{ secrets.SUBMODULE_TOKEN }} # Add this line
 
