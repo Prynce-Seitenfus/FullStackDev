@@ -1,4 +1,4 @@
-name: CI-STM32CubeIDE
+name: pipe-test-board
 
 on:
   push:
