@@ -15,7 +15,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-          token: ${{ secrets.SUBMODULE_TOKEN }}
+          repository: Prynce-Seitenfus/FullStackDev
+          ssh-strict: true
+          persist-credentials: true
+          clean: true
+          fetch-depth: 1
+          lfs: false
+          set-safe-directory: true
+          token: ${{ secrets.SUBMODULE_TOKEN }} # Add this line
 
       - name: Show working directory and files
         run: |
