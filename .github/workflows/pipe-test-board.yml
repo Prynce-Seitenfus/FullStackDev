@@ -11,9 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Pull LFS files
-        run: git lfs pull
+        with:
+          lfs: true
 
       - name: Docker Login
         uses: docker/login-action@v3.4.0
