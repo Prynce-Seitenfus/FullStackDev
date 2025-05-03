@@ -16,9 +16,10 @@ jobs:
 
       - name: Show working directory and files
         run: |
+          echo "GITHUB_WORKSPACE: ${{ github.workspace }}"
           pwd
           ls -l
-          ls -l ./TCC/test-board
+          ls -l ${{ github.workspace }}/TCC/test-board
 
       - name: Run build.sh
-        run: ./TCC/test-board/build.sh
+        run: ${{ github.workspace }}/TCC/test-board/build.sh
