@@ -7,7 +7,7 @@ on:
 
 jobs:
   CI:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     container:
       image: prynceseitenfus/STM32CubeIDE:1.18.1
 
