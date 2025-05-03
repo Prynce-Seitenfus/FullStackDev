@@ -9,7 +9,7 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     container:
-      image: prynceseitenfus/STM32CubeIDE:1.18.1
+      image: prynceseitenfus/stm32cubeide:1.18.1
 
     steps:
       - uses: actions/checkout@v2
