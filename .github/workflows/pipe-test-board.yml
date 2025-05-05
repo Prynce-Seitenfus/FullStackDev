@@ -19,12 +19,12 @@ jobs:
 
       #     token: ${{ secrets.SUBMODULE_TOKEN }} # Add this line
 
-      - name: Show working directory and files
-        run: |
-          echo "GITHUB_WORKSPACE: ${{ github.workspace }}"
-          pwd
-          ls -l
-          ls -l ./TCC/test-board
+      # - name: Show working directory and files
+      #   run: |
+      #     echo "GITHUB_WORKSPACE: ${{ github.workspace }}"
+      #     pwd
+      #     ls -l
+      #     ls -l ./TCC/test-board
 
       - name: Run build.sh
         run: ./test-board/build.sh
