@@ -27,4 +27,4 @@ jobs:
           ls -l ./TCC/test-board
 
       - name: Run build.sh
-        run: ./TCC/test-board/build.sh
+        run: ./test-board/build.sh
