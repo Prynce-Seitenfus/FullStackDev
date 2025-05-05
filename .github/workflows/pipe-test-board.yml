@@ -12,12 +12,12 @@ jobs:
       image: prynceseitenfus/stm32cubeide:1.18.1
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
-          repository: Prynce-Seitenfus/FullStackDev
+      # - uses: actions/checkout@v2
+      #   with:
+      #     submodules: true
+      #     repository: Prynce-Seitenfus/FullStackDev
 
-          token: ${{ secrets.SUBMODULE_TOKEN }} # Add this line
+      #     token: ${{ secrets.SUBMODULE_TOKEN }} # Add this line
 
       - name: Show working directory and files
         run: |
@@ -27,4 +27,4 @@ jobs:
           ls -l ./TCC/test-board
 
       - name: Run build.sh
-        run: ./TCC/test-board/build.sh
+        run: ./test-board/build.sh
